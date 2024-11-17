@@ -105,6 +105,7 @@ const MeuCalendario: React.FC = () => {
                 title={<span style={{fontWeight:'bold'}}>{`Horários para ${selectedDate?.toLocaleDateString()}`}</span>}
                 visible={showModal}
                 centered
+                width={'90%'}
                 onCancel={handleCloseModal}
                 footer={[
                     <Row style={{display:'flex',flexDirection:'row',justifyContent:'end',gap:20}}>
