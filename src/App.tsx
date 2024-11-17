@@ -70,6 +70,7 @@ function App() {
             title="Digite o código do agendamento para continuar"
             visible={isCodeModalOpen}
             onOk={handleValidateCode}
+            centered
             onCancel={() => setIsCodeModalOpen(false)}
             okText="Confirmar"
             cancelText="Cancelar"
