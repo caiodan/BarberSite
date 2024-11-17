@@ -56,7 +56,7 @@ const MeuCalendario: React.FC = () => {
         return (
 
             <Row style={{display:'flex',flexDirection:'column'}}>
-                <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',marginTop:10,marginBottom:10}}>
+                <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',marginTop:14,marginBottom:14}}>
                     <span style={{display:'flex',flexDirection:'row',alignItems:'center',gap:5,fontWeight:'bold'}}>Horários Indisponíveis: <div style={{width:'25px',borderRadius:3,height:'18px',background:'#838383'}}/></span>
                 </div>
                 <div className="horarios-list">
