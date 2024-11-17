@@ -67,8 +67,10 @@ const MeuCalendario: React.FC = () => {
                             onClick={() => handleHourSelect(hora)}
                             disabled={marcados.includes(hora)} // Desabilita botão se estiver marcado
                             style={{
-                                width: '80px',
+                                width: '90px',
+                                height:'40px',
                                 border: 'none',
+                                fontSize:15,
                                 background: marcados.includes(hora)
                                     ? '#838383' // Cor preta para horários marcados
                                     : selectedHour === hora
