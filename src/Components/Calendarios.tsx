@@ -28,10 +28,7 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
           }}
         >
           <h1 style={{ margin: 0, color: '#830101' }}>HORÁRIOS DISPONÍVEIS</h1>
-          <span style={{ fontWeight:'bold'}}>Selecione um horário e uma data para prosseguir.</span>
-          <div style={{display:'flex',flexDirection:'row',alignItems:'center',gap:30}}>
-            <span style={{display:'flex',flexDirection:'row',alignItems:'center',gap:5,fontWeight:500}}>Feriados:<div style={{width:'18px',borderRadius:3,height:'18px',background:'#ffd208'}}/></span>
-          </div>
+          <span style={{ fontWeight:'bold'}}>Selecione uma data e um horário para prosseguir.</span>
         </Row>
 
         <Row style={{width:'100%',padding:20,display:'flex',justifyContent:'center'}}>
