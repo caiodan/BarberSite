@@ -27,12 +27,12 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
             gap: 30,
           }}
         >
-          <h1 style={{ margin: 0, color: '#830101' }}>HORÁRIOS DISPONÍVEIS</h1>
+          <h1 style={{ margin: 0, color: ' #0055bf' }}>HORÁRIOS DISPONÍVEIS</h1>
           <span style={{ fontWeight:'bold'}}>Selecione uma data e um horário para prosseguir.</span>
         </Row>
 
         <Row style={{width:'100%',padding:20,display:'flex',justifyContent:'center'}}>
-            <MeuCalendario/>
+            <MeuCalendario setEtapa={setEtapa}/>
         </Row>
            
         <Row
@@ -52,7 +52,7 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
               fontWeight: 'bold',
               width: '50%',
               fontSize: '4.5vw',
-              background: '#830101',
+              background: ' #0055bf',
               border: 'none',
               scale:'0.9'
             }}

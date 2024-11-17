@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Calendar, { TileClassNameFunc } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Estilos padrão
-import { Modal, Button, Row } from 'antd'; // Importando Modal e Button do Ant Design
+import { Modal, Button, Row, message, } from 'antd';
+import { CopyOutlined } from '@ant-design/icons';
 
-const MeuCalendario: React.FC = () => {
+const MeuCalendario: React.FC<any> = ({setEtapa}) => {
     const [date, setDate] = useState<any>(new Date());
     const [showModal, setShowModal] = useState<boolean>(false);
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -26,7 +27,8 @@ const MeuCalendario: React.FC = () => {
 
     const handleOk = () => {
       setIsModalOpen(false);
-      window.open('https://w.app/Ajyxhl')
+      handleAgendamento()
+    //   window.open('https://w.app/Ajyxhl')
     };
   
     const handleCancel = () => {
@@ -40,7 +42,7 @@ const MeuCalendario: React.FC = () => {
 
     const handleCloseModal = (Cabou:any) => {
         setShowModal(false);
-        setSelectedHour(null);
+        // setSelectedHour(null);
         {Cabou && setIsModalOpen(true)}
     };
 
@@ -74,7 +76,7 @@ const MeuCalendario: React.FC = () => {
                                 background: marcados.includes(hora)
                                     ? '#838383' // Cor preta para horários marcados
                                     : selectedHour === hora
-                                    ? '#830101'
+                                    ? ' #0055bf'
                                     : undefined,
                                 color: marcados.includes(hora) ? '#fff' : selectedHour === hora ? '#fff' : undefined,
                                 cursor: marcados.includes(hora) ? 'not-allowed' : 'pointer',
@@ -90,6 +92,28 @@ const MeuCalendario: React.FC = () => {
             
         );
     };
+
+    const handleAgendamento = () => {
+        Modal.success({
+          centered:true,
+          title:<span style={{fontWeight:'bold'}}>Agendamento realizado com sucesso!</span> ,
+          content: (
+            <div>
+              <p style={{fontWeight:'500'}}>
+                Para consultar ou cancelar, utilize o código abaixo:
+              </p>
+              <p style={{ fontWeight: 'bold', fontSize: '16px', color: '#1890ff',gap:10 }}>
+              a98s8cjaus918kx0aa9 <CopyOutlined onClick={()=>{navigator.clipboard.writeText('a98s8cjaus918kx0aa9');message.success('Código copiado com sucesso!')}} />
+              </p>
+            </div>
+          ),
+          okText: 'Entendido',
+          onOk: () => {
+            setEtapa(0) // Adicione ações extras aqui, se necessário
+          },
+        });
+      };
+      
 
     return (
         <div>
@@ -112,7 +136,7 @@ const MeuCalendario: React.FC = () => {
                         <Button key="close" onClick={()=>handleCloseModal(false)}>
                             Fechar
                         </Button>
-                        <Button style={{background:'#830101',border:'none'}} type='primary' key="close" onClick={()=>handleCloseModal(true)}>
+                        <Button style={{background:' #0055bf',border:'none'}} type='primary' key="close" onClick={()=>handleCloseModal(true)}>
                             Agendar Horário
                         </Button>
                     </Row>
@@ -129,17 +153,17 @@ const MeuCalendario: React.FC = () => {
                 )}
             </Modal>
             <Modal
-                title="Parabéns! Você chegou no final da fase de teste"
+                title={<span style={{fontWeight:'bold'}}>Agendar para o dia {selectedDate?.toLocaleDateString()} as {selectedHour+':00'}?</span>}
                 open={isModalOpen}
                 onOk={handleOk}
                 onCancel={handleCancel}
                 closable={false}
                 centered
-                okButtonProps={{style:{background:'#830101'}}}
-                okText="Entrar em contato"
+                okButtonProps={{style:{background:' #0055bf'}}}
+                okText="Agendar agora"
                 cancelText="Fechar"
             >
-                <p>O teste do site foi concluído. Dúvidas? Entre em contato conosco!</p>
+                <p><b style={{ color: 'red' }}>Atenção: </b>Ao clicar em <b>Agendar agora</b> seu agendamento será concluído, podendo ser desmarcado na aba <b>Meus Agendamentos</b> no inicio de nosso site.</p>
             </Modal>
         </div>
     );
