@@ -138,7 +138,7 @@ function App() {
       <SwitchTransition>
         <CSSTransition
           key={Etapa}
-          timeout={110}
+          timeout={300}
           classNames="fade"
           unmountOnExit
         >
