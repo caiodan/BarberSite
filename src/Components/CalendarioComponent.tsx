@@ -57,7 +57,7 @@ const MeuCalendario: React.FC = () => {
 
             <Row style={{display:'flex',flexDirection:'column'}}>
                 <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',marginTop:10,marginBottom:10}}>
-                    <span style={{display:'flex',flexDirection:'row',alignItems:'center',gap:5,fontWeight:'bold'}}>Horários Indisponíveis: <div style={{width:'25px',borderRadius:3,height:'18px',background:'#b3b3b3'}}/></span>
+                    <span style={{display:'flex',flexDirection:'row',alignItems:'center',gap:5,fontWeight:'bold'}}>Horários Indisponíveis: <div style={{width:'25px',borderRadius:3,height:'18px',background:'#838383'}}/></span>
                 </div>
                 <div className="horarios-list">
                 
@@ -70,7 +70,7 @@ const MeuCalendario: React.FC = () => {
                                 width: '80px',
                                 border: 'none',
                                 background: marcados.includes(hora)
-                                    ? '#b3b3b3' // Cor preta para horários marcados
+                                    ? '#838383' // Cor preta para horários marcados
                                     : selectedHour === hora
                                     ? '#830101'
                                     : undefined,
