@@ -26,7 +26,7 @@ const MeuCalendario: React.FC = () => {
 
     const handleOk = () => {
       setIsModalOpen(false);
-      // Lógica adicional caso necessário
+      window.open('https://w.app/Ajyxhl')
     };
   
     const handleCancel = () => {
