@@ -36,3 +36,92 @@
     transform: rotate(360deg);
   }
 }
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.time-slot {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.time-slot:hover {
+      list-style: none;
+    /* color: rgb(24, 144, 255); */
+    background: #1677ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.time-slot.scheduled {
+  background-color: #1890ff;
+  color: #fff;
+  border-color: #1890ff;
+}
+
+.time-slot.selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #181818;
+  border-color: #181818;
+}
+
+.liststyle{
+    list-style: none;
+    /* color: rgb(24, 144, 255); */
+    background: #181818;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px;
+    scale: 0.68;
+}
+.horarios-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Exibe 4 botões por linha */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.hora button {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hora button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Alterando a cor do dia selecionado diretamente no CSS */
+.react-calendar__tile--active {
+  background-color: #830101 !important;
+  color: white !important; /* Cor do texto branca */
+}
+
+
+.react-calendar__tile--now{
+  background-color: #c5c5c5 !important;
+}
+
+.meusagendamentos{
+    font-weight: bold;
+    color: rgb(255 255 255);
+    background: #830101;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
