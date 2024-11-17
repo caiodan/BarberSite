@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Row, Button, Col, Modal, message } from 'antd';
 import BarberShopCalendar from './Components/Calendarios';

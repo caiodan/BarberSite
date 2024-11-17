@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Button, Row,} from 'antd';
-import 'dayjs/locale/pt-br'; // Importando a localidade pt-br para o dayjs
-import Calendar from 'react-calendar';
+import 'dayjs/locale/pt-br';
 import MeuCalendario from './CalendarioComponent';
 
 const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
