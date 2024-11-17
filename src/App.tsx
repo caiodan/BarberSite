@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Row, Button, Col, Modal, message } from 'antd';
 import BarberShopCalendar from './Components/Calendarios';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
 function App() {
 
@@ -126,11 +127,24 @@ function App() {
     )
   })
 
+  const getStepComponent = () => {
+    if (Etapa === 0) return <Etapa1 />;
+    if (Etapa === 1) return <Etapa2 />;
+    if (Etapa === 2) return <BarberShopCalendar setEtapa={setEtapa} />;
+  };
+
   return (
-    <Row style={{ width: '100vw', height: '100vh',background: '#fbfbfb'}}>
-      {Etapa == 0 && <Etapa1/>}
-      {Etapa == 1 && Etapa2()}
-      {Etapa == 2 && <BarberShopCalendar setEtapa={setEtapa}/>}
+    <Row style={{ width: '100vw', height: '100vh', background: '#fbfbfb' }}>
+      <SwitchTransition>
+        <CSSTransition
+          key={Etapa}
+          timeout={110}
+          classNames="fade"
+          unmountOnExit
+        >
+          {getStepComponent()}
+        </CSSTransition>
+      </SwitchTransition>
     </Row>
 
   );
