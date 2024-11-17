@@ -14,7 +14,7 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: 50,
+          gap: 30,
         }}
       >
         <Row
@@ -31,10 +31,10 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
           <span style={{ fontWeight:'bold'}}>Selecione um horário e uma data para prosseguir.</span>
         </Row>
 
-        <div style={{display:'flex',flexDirection:'row',alignItems:'center',gap:30}}>
+        {/* <div style={{display:'flex',flexDirection:'row',alignItems:'center',gap:30}}>
             <span style={{display:'flex',flexDirection:'row',alignItems:'center',gap:5,fontWeight:500}}>Agendamento Marcado: <div style={{width:'18px',borderRadius:3,height:'18px',background:'#00c12b'}}/></span>
             <span style={{display:'flex',flexDirection:'row',alignItems:'center',gap:5,fontWeight:500}}>Feriados:<div style={{width:'18px',borderRadius:3,height:'18px',background:'#c7c7c7'}}/></span>
-          </div>
+          </div> */}
 
         <Row style={{width:'100%',padding:20,display:'flex',justifyContent:'center'}}>
             <MeuCalendario/>

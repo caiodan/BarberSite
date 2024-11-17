@@ -41,7 +41,7 @@ function App() {
     };
 
     return (
-      <Row style={{ display: 'flex', background: 'whitesmoke', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', flexDirection: 'column', gap: 50 }}>
+      <Row style={{ display: 'flex', background: '#f3f3f3', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', flexDirection: 'column', gap: 50 }}>
         <div style={{display:'flex',alignItems:'center',gap:30}}>
           <span onClick={()=>{setIsModalOpen(true)}} className='meusagendamentos'>Meus Agendamentos</span>
         </div>
@@ -102,7 +102,7 @@ function App() {
   })
   const Etapa2 = (() => {
     return (
-      <Row style={{ display: 'flex', background: 'whitesmoke', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', gap: 50}}>
+      <Row style={{ display: 'flex', background: '#f3f3f3', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', gap: 30}}>
         <Row style={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:15}}> 
           <h1 style={{margin:0,color:'#830101'}}>Serviços</h1>
           <span style={{fontWeight:500}}>Selecione um tipo de serviço para prosseguir.</span>
@@ -110,7 +110,7 @@ function App() {
         <Row style={{display:'flex',height:'max-content',width:'100%',flexWrap:'wrap',alignItems:'center',justifyContent:'center',gap:30}}>
           {Cortes.map((el) => {
             return (
-            <div onClick={()=>setEtapa(2)} style={{boxShadow:'rgb(0 0 0 / 7%) 0px 3px 8px',display:'flex',flexDirection:'column',gap:10,padding:'5px 5px',alignItems:'center',justifyContent:'center',background: '#fff',borderRadius:10 }}>
+            <div onClick={()=>setEtapa(2)} style={{boxShadow:'rgb(0 0 0 / 7%) 0px 3px 8px',display:'flex',flexDirection:'column',gap:10,width:'40%',padding:'10px 0px',alignItems:'center',justifyContent:'center',background: '#fff',borderRadius:10 }}>
               <img style={{width:'30%'}} src={el.Icon}></img>
               <span style={{fontWeight:'bold'}}>{el.Nome}</span>
               <span style={{fontWeight:'bold'}}>{el.Valor}</span>
@@ -127,7 +127,7 @@ function App() {
   })
 
   return (
-    <Row style={{ width: '100vw', height: '100vh',background: 'whitesmoke'}}>
+    <Row style={{ width: '100vw', height: '100vh',background: '#f3f3f3'}}>
       {Etapa == 0 && <Etapa1/>}
       {Etapa == 1 && Etapa2()}
       {Etapa == 2 && <BarberShopCalendar setEtapa={setEtapa}/>}
