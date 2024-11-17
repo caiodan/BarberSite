@@ -110,7 +110,7 @@ function App() {
         <Row style={{display:'flex',height:'max-content',width:'100%',flexWrap:'wrap',alignItems:'center',justifyContent:'center',gap:30}}>
           {Cortes.map((el) => {
             return (
-            <div onClick={()=>setEtapa(2)} style={{boxShadow:'rgb(0 0 0 / 7%) 0px 3px 8px',display:'flex',flexDirection:'column',gap:10,padding:'10px 5px',alignItems:'center',justifyContent:'center',background: '#fff',borderRadius:10 }}>
+            <div onClick={()=>setEtapa(2)} style={{boxShadow:'rgb(0 0 0 / 7%) 0px 3px 8px',display:'flex',flexDirection:'column',gap:10,padding:'5px 5px',alignItems:'center',justifyContent:'center',background: '#fff',borderRadius:10 }}>
               <img style={{width:'30%'}} src={el.Icon}></img>
               <span style={{fontWeight:'bold'}}>{el.Nome}</span>
               <span style={{fontWeight:'bold'}}>{el.Valor}</span>
