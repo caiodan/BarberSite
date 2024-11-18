@@ -84,7 +84,7 @@ function App() {
             />
           </Modal>
         </div>
-        <img style={{ width: '65%', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px', border: '7px solid  rgb(145 28 33)', borderRadius: '50%' }} src={'https://i.pinimg.com/736x/32/f8/79/32f8796902b8ef96194b076ef801ca62.jpg'}></img>
+        <img style={{ width: '65%', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px', border: '8px solid  rgb(145 28 33)', borderRadius: '50%' }} src={'https://i.pinimg.com/736x/32/f8/79/32f8796902b8ef96194b076ef801ca62.jpg'}></img>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
           <Button onClick={() => { message.info('Aba indisponível na versão de teste') }} style={{ padding: '30px 20px', fontWeight: 'bold', fontSize: '4.5vw', background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', border: 'none' }} type='primary'>CONHEÇA NOSSA BARBEARIA</Button>
           <Button onClick={(() => { setEtapa(1) })} style={{ padding: '30px 20px', fontWeight: 'bold', fontSize: '4.5vw', background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', border: 'none' }} type='primary'>AGENDAR CORTE</Button>
