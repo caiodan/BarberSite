@@ -37,7 +37,7 @@ function App() {
         setIsModalOpen(true); // Abre o modal de "Meus Agendamentos"
       } else {
         Modal.error({
-          okButtonProps:{style:{background:'linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'}},
+          okButtonProps:{style:{background:'linear-gradient(rgb(185, 43, 49), rgb(145 28 33))'}},
           title: 'Código incorreto',
           content: <span>O código digitado está incorreto ou não existe.<br/> Por favor, tente novamente.</span>,
         });
@@ -74,7 +74,7 @@ function App() {
             centered
             onCancel={() => setIsCodeModalOpen(false)}
             okText="Confirmar"
-            okButtonProps={{style:{background:'linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'}}}
+            okButtonProps={{style:{background:'linear-gradient(rgb(185, 43, 49), rgb(145 28 33))'}}}
             cancelText="Cancelar"
           >
             <Input
@@ -84,10 +84,10 @@ function App() {
             />
           </Modal>
         </div>
-        <img style={{ width: '65%', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px', border: '7px solid  rgb(38 82 113)', borderRadius: '50%' }} src={'https://i.pinimg.com/736x/32/f8/79/32f8796902b8ef96194b076ef801ca62.jpg'}></img>
+        <img style={{ width: '65%', boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px', border: '7px solid  rgb(145 28 33)', borderRadius: '50%' }} src={'https://i.pinimg.com/736x/32/f8/79/32f8796902b8ef96194b076ef801ca62.jpg'}></img>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
-          <Button onClick={() => { message.info('Aba indisponível na versão de teste') }} style={{ padding: '30px 20px', fontWeight: 'bold', fontSize: '4.5vw', background: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))', border: 'none' }} type='primary'>CONHEÇA NOSSA BARBEARIA</Button>
-          <Button onClick={(() => { setEtapa(1) })} style={{ padding: '30px 20px', fontWeight: 'bold', fontSize: '4.5vw', background: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))', border: 'none' }} type='primary'>AGENDAR CORTE</Button>
+          <Button onClick={() => { message.info('Aba indisponível na versão de teste') }} style={{ padding: '30px 20px', fontWeight: 'bold', fontSize: '4.5vw', background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', border: 'none' }} type='primary'>CONHEÇA NOSSA BARBEARIA</Button>
+          <Button onClick={(() => { setEtapa(1) })} style={{ padding: '30px 20px', fontWeight: 'bold', fontSize: '4.5vw', background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', border: 'none' }} type='primary'>AGENDAR CORTE</Button>
         </div>
         <Modal
           open={isModalOpen}
@@ -130,7 +130,7 @@ function App() {
           footer={
             <Row style={{ display: 'flex', justifyContent: 'end', gap: 10 }}>
               <Button onClick={handleCancelAgendamento}>Fechar</Button>
-              <Button style={{ background: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))', color: '#fff' }} onClick={handleCancelAgendamentoConfirm}>OK</Button>
+              <Button style={{ background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', color: '#fff' }} onClick={handleCancelAgendamentoConfirm}>OK</Button>
             </Row>
 
           }
@@ -144,7 +144,7 @@ function App() {
     return (
       <Row style={{ display: 'flex', background: '#fbfbfb', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'column', gap: 30 }}>
         <Row style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 15 }}>
-          <h1 style={{ margin: 0, color: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))' }}>SERVIÇOS</h1>
+          <h1 style={{ margin: 0, color: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))' }}>SERVIÇOS</h1>
           <span style={{ fontWeight: 'bold' }}>Selecione um tipo de serviço para prosseguir.</span>
         </Row>
         <Row style={{ display: 'flex', height: 'max-content', width: '100%', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 30 }}>
@@ -153,13 +153,13 @@ function App() {
               <div onClick={() => setEtapa(2)} style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px', display: 'flex', flexDirection: 'column', gap: 10, width: '40%', padding: '10px 0px', alignItems: 'center', justifyContent: 'center', background: '#fff', borderRadius: 10 }}>
                 <img style={{ width: '30%' }} src={el.Icon}></img>
                 <span style={{ fontWeight: 'bold' }}>{el.Nome}</span>
-                <span style={{ fontWeight: '500', background: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))', color: '#fff', padding: '2px 15px', borderRadius: '5px' }}>{el.Valor}</span>
+                <span style={{ fontWeight: '500', background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', color: '#fff', padding: '2px 15px', borderRadius: '5px' }}>{el.Valor}</span>
               </div>
             )
           })}
         </Row>
         <Row style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <Button onClick={(() => { setEtapa(0) })} style={{ padding: '25px 15px', fontWeight: 'bold', width: '50%', fontSize: '4.5vw', background: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))', border: 'none', scale: '0.9' }} type='primary'>Voltar</Button>
+          <Button onClick={(() => { setEtapa(0) })} style={{ padding: '25px 15px', fontWeight: 'bold', width: '50%', fontSize: '4.5vw', background: ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))', border: 'none', scale: '0.9' }} type='primary'>Voltar</Button>
         </Row>
 
       </Row>

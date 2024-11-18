@@ -1,4 +1,4 @@
-.App {
+.App{
   text-align: center;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #fff;
+  background: #fff;
   transition: all 0.3s;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .time-slot.scheduled {
-  background-color: #1890ff;
+  background: #1890ff;
   color: #fff;
   border-color: #1890ff;
 }
@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-color: #181818;
+  background: #181818;
   border-color: #181818;
 }
 
@@ -97,35 +97,27 @@
 
 .hora button {
   padding: 10px;
-  background-color: #f0f0f0;
+  background: #f0f0f0;
   border: 1px solid #ddd;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
 .hora button:hover {
-  background-color: #e0e0e0;
+  background: #e0e0e0;
 }
-
-/* Alterando a cor do dia selecionado diretamente no CSS */
-.react-calendar__tile--active {
-  background-color:  linear-gradient(rgb(32, 122, 185), rgb(30 89 131)) !important;
-  border-radius: 5px !important;
-  color: white !important; /* Cor do texto branca */
-}
-
 
 .meusagendamentos{
     font-weight: bold;
     color: rgb(255 255 255);
-    background:  linear-gradient(rgb(32, 122, 185), rgb(30 89 131));
+    background:  linear-gradient(rgb(185, 43, 49), rgb(145 28 33));
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from{
-color:  linear-gradient(rgb(32, 122, 185), rgb(30 89 131));
+color:  linear-gradient(rgb(185, 43, 49), rgb(145 28 33));
 font-weight: bold;
 font-size: 16px;
 }
@@ -147,4 +139,7 @@ font-size: 16px;
   opacity: 0;
   transform: translateX(-100%);
   transition: opacity 300ms, transform 300ms;
+}
+.react-calendar__tile--active{
+  background: linear-gradient(rgb(185, 43, 49), rgb(145 28 33))!important;
 }

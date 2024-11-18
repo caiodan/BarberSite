@@ -74,9 +74,9 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
                                 border: 'none',
                                 fontSize:15,
                                 background: marcados.includes(hora)
-                                    ? '#838383' // Cor preta para horários marcados
+                                    ? '#838383'
                                     : selectedHour === hora
-                                    ? ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'
+                                    ? ' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))'
                                     : undefined,
                                 color: marcados.includes(hora) ? '#fff' : selectedHour === hora ? '#fff' : undefined,
                                 cursor: marcados.includes(hora) ? 'not-allowed' : 'pointer',
@@ -108,7 +108,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
             </div>
           ),
           okText: 'Entendido',
-          okButtonProps:{style:{background:'linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'}},
+          okButtonProps:{style:{background:'linear-gradient(rgb(185, 43, 49), rgb(145 28 33))'}},
           onOk: () => {
             setEtapa(0) // Adicione ações extras aqui, se necessário
           },
@@ -137,7 +137,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
                         <Button key="close" onClick={()=>handleCloseModal(false)}>
                             Fechar
                         </Button>
-                        <Button style={{background:' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))',border:'none'}} type='primary' key="close" onClick={()=>handleCloseModal(true)}>
+                        <Button style={{background:' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))',border:'none'}} type='primary' key="close" onClick={()=>handleCloseModal(true)}>
                             Agendar Horário
                         </Button>
                     </Row>
@@ -160,7 +160,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
                 onCancel={handleCancel}
                 closable={false}
                 centered
-                okButtonProps={{style:{background:' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'}}}
+                okButtonProps={{style:{background:' linear-gradient(rgb(185, 43, 49), rgb(145 28 33))'}}}
                 okText="Agendar agora"
                 cancelText="Fechar"
             >
