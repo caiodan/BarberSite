@@ -27,7 +27,7 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
             gap: 30,
           }}
         >
-          <h1 style={{ margin: 0, color: ' #0055bf' }}>HORÁRIOS DISPONÍVEIS</h1>
+          <h1 style={{ margin: 0, color: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))' }}>HORÁRIOS DISPONÍVEIS</h1>
           <span style={{ fontWeight:'bold'}}>Selecione uma data e um horário para prosseguir.</span>
         </Row>
 
@@ -52,7 +52,7 @@ const BarberShopCalendar: React.FC<any> = ({ setEtapa }) => {
               fontWeight: 'bold',
               width: '50%',
               fontSize: '4.5vw',
-              background: ' #0055bf',
+              background: ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))',
               border: 'none',
               scale:'0.9'
             }}

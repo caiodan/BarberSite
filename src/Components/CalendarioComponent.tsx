@@ -76,7 +76,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
                                 background: marcados.includes(hora)
                                     ? '#838383' // Cor preta para horários marcados
                                     : selectedHour === hora
-                                    ? ' #0055bf'
+                                    ? ' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'
                                     : undefined,
                                 color: marcados.includes(hora) ? '#fff' : selectedHour === hora ? '#fff' : undefined,
                                 cursor: marcados.includes(hora) ? 'not-allowed' : 'pointer',
@@ -108,6 +108,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
             </div>
           ),
           okText: 'Entendido',
+          okButtonProps:{style:{background:'linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'}},
           onOk: () => {
             setEtapa(0) // Adicione ações extras aqui, se necessário
           },
@@ -136,7 +137,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
                         <Button key="close" onClick={()=>handleCloseModal(false)}>
                             Fechar
                         </Button>
-                        <Button style={{background:' #0055bf',border:'none'}} type='primary' key="close" onClick={()=>handleCloseModal(true)}>
+                        <Button style={{background:' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))',border:'none'}} type='primary' key="close" onClick={()=>handleCloseModal(true)}>
                             Agendar Horário
                         </Button>
                     </Row>
@@ -159,7 +160,7 @@ const MeuCalendario: React.FC<any> = ({setEtapa}) => {
                 onCancel={handleCancel}
                 closable={false}
                 centered
-                okButtonProps={{style:{background:' #0055bf'}}}
+                okButtonProps={{style:{background:' linear-gradient(rgb(32, 122, 185), rgb(30 89 131))'}}}
                 okText="Agendar agora"
                 cancelText="Fechar"
             >

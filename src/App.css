@@ -110,7 +110,7 @@
 
 /* Alterando a cor do dia selecionado diretamente no CSS */
 .react-calendar__tile--active {
-  background-color:  #0055bf !important;
+  background-color:  linear-gradient(rgb(32, 122, 185), rgb(30 89 131)) !important;
   border-radius: 5px !important;
   color: white !important; /* Cor do texto branca */
 }
@@ -119,13 +119,13 @@
 .meusagendamentos{
     font-weight: bold;
     color: rgb(255 255 255);
-    background:  #0055bf;
+    background:  linear-gradient(rgb(32, 122, 185), rgb(30 89 131));
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 .react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from{
-color:  #0055bf;
+color:  linear-gradient(rgb(32, 122, 185), rgb(30 89 131));
 font-weight: bold;
 font-size: 16px;
 }
